@@ -1,5 +1,5 @@
 <?php
-
+//Juan D. Albarracin    NRC: 23357
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -12,7 +12,7 @@ class FacturaController extends Controller
         return view('factura');
     }
 
-    // Aqui validamos datos que pusimos, calculamos subtotal, IVA y su total
+    // Aquí validamos datos que pusimos, calculamos subtotal, IVA y su total
     public function calcular(Request $request)
     {
         $data = $request->validate([
@@ -23,10 +23,10 @@ class FacturaController extends Controller
             'iva'      => 'nullable|numeric|min:0',
         ]);
 
-        // Calculamos con los parametros
+        // Calculamos con los parámetros
         $cantidad = $data['cantidad'];
         $precio   = $data['precio'];
-        $ivaPct   = $data['iva'] ?? 12;  // Asumimos el 12% como se nos pide si no se ingresa
+        $ivaPct   = $data['iva'] ?? 12;  // Asumimos el 12% como se nos pide si no se ingresa un valor
 
         $subtotal = $cantidad * $precio;
         $montoIva = $subtotal * ($ivaPct / 100);

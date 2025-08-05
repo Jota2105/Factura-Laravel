@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container py-5">
-    <h1 style = "color: blue" class="mb-4">Datos de la factura</h1>
+    <h1 style = "color: blue" class="mb-4">Datos de la factura</h1 >
 
     <ul class="list-group mb-4">
         <li class="list-group-item">

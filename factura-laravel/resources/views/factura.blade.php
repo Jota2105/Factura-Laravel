@@ -26,12 +26,12 @@
                    class="form-control @error('producto') is-invalid @enderror"
                    value="{{ old('producto') }}">
             @error('producto')
-                <div class="invalid-feedback">{{ $message }}</div>
+                <div class="invalid-feedback">{{ $message }}</div >
             @enderror
         </div >
 
         <div class="mb-3">
-            <label for="cantidad" class="form-label">Cantidad de productos</label>
+            <label for="cantidad" class="form-label">Cantidad producto</label>
             <input type="number" id="cantidad" name="cantidad" min="1"
                    class="form-control @error('cantidad') is-invalid @enderror"
                    value="{{ old('cantidad', 1) }}">
